@@ -63,7 +63,7 @@ export function Footer() {
             <h3 className="text-white font-medium text-base md:text-lg mb-3 md:mb-4">Company</h3>
             <ul className="space-y-2 md:space-y-2">
               <li><Link href="/about" className="text-sm md:text-base text-gray-400 hover:text-[#B3EBF2] transition-colors duration-300">About Us</Link></li>
-              <li><Link href="#" className="text-sm md:text-base text-gray-400 hover:text-[#B3EBF2] transition-colors duration-300">Demo</Link></li>
+              <li><Link href="/request-demo" className="text-sm md:text-base text-gray-400 hover:text-[#B3EBF2] transition-colors duration-300">Demo</Link></li>
               <li><Link href="/#join-team" className="text-sm md:text-base text-gray-400 hover:text-[#B3EBF2] transition-colors duration-300">Careers</Link></li>
             </ul>
           </div>
