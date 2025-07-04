@@ -14,6 +14,7 @@ interface CardData {
     gradientTo: string;
     accentColor: string;
     iconName: string;
+    link: string;
 }
 
 export function PastAdopters() {
@@ -24,7 +25,7 @@ export function PastAdopters() {
         {
             title: "Enterprise",
             category: "Private Sector",
-            description: "Transforming secure data into powerful business advantages. Your data. Your environment. Our expertise. Proven success with enterprises.",
+            description: "Empowered business teams to turn their ideas into secure, production-ready applications deployed in under 60 minutes—no coding required, with real-time UI previews, live data models, and seamless Salesforce, Slack, and API integrations.",
             caseStudies: [
                 "<strong>Unlock Predictive Insights:</strong> Deploy AI agents to analyze complex datasets, revealing hidden patterns and forecasting future trends.",
                 "<strong>Sharpen Decision-Making:</strong> Convert raw data into actionable intelligence, empowering faster, more strategic business choices.",
@@ -33,12 +34,13 @@ export function PastAdopters() {
             gradientFrom: "blue-500/40",
             gradientTo: "indigo-800/60",
             accentColor: "#4CCDFF",
-            iconName: "building-skyscraper"
+            iconName: "building-skyscraper",
+            link: "/enterprise"
         },
         {
             title: "Government",
             category: "Public Sector",
-            description: "Empowering governments to transform data into smarter decisions. We've enabled public sector organizations streamline operations and make superior policy, HR, financial, and operational choices—all while maximizing existing data assets in secure environments.",
+            description: "Enabled non-technical officials to self-serve insights from air-gapped national data in under one minute—translated plain-English queries into audited SQL and interactive visualizations within a fully on-premise, compliance-driven environment.",
             caseStudies: [
                 "<strong>Generate Actionable Analytics:</strong> Utilize AI agents to process vast government data, extracting clear insights for mission-critical tasks.",
                 "<strong>Boost Operational Efficiency:</strong> Drive significant improvements in resource allocation and process optimization through data-driven intelligence.",
@@ -47,12 +49,15 @@ export function PastAdopters() {
             gradientFrom: "purple-500/40",
             gradientTo: "violet-800/60",
             accentColor: "#C89BFF",
-            iconName: "building-columns"
+            iconName: "building-columns",
+            link: "/government"
         }
     ];
 
     const Card = ({ data }: { data: CardData }) => (
-        <div className="rounded-3xl overflow-hidden border border-gray-800 hover:border-gray-700 transition-all duration-500 flex flex-col bg-black/80 h-full group backdrop-blur-sm">
+        <Link href={data.link} className="block">
+            <div className="rounded-3xl overflow-hidden border border-gray-800 hover:border-gray-700 transition-all duration-500 flex flex-col bg-black/80 h-full group backdrop-blur-sm cursor-pointer
+                hover:shadow-[0_0_0_4px_rgba(255,255,255,0.7),0_0_16px_4px_rgba(255,255,255,0.8)] focus:shadow-[0_0_0_4px_rgba(255,255,255,0.7),0_0_16px_4px_rgba(255,255,255,0.8)]">
             {/* Image section */}
             <div className={`aspect-[16/7] relative overflow-hidden bg-gradient-to-br from-${data.gradientFrom} to-${data.gradientTo} flex items-center justify-center`}>
                 {/* Accent colored overlay element */}
@@ -108,6 +113,7 @@ export function PastAdopters() {
                 </div>
             </div>
         </div>
+        </Link>
     );
     
     return (
@@ -115,13 +121,13 @@ export function PastAdopters() {
             <div className="container px-4 sm:px-6 md:px-8 relative z-10">
                 <FadeInSection>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium mb-4 sm:mb-6 text-center">
-                        Our Clients
+                        Case Studies
                     </h2>
                 </FadeInSection>
                 
                 <FadeInSection delay={200}>
                     <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto text-center mb-10 sm:mb-16">
-                    White glove experience for our partners across sectors
+                    Real-world success stories from our enterprise and government partners
                     </p>
                 </FadeInSection>
                 
